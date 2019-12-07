@@ -1,0 +1,22 @@
+<% include ../views/head %>
+
+<div class="container">
+    <div class="row">
+        <div class="container">
+            <h1 style="text-align: center;">
+                Create a new Comment for <%= allCampgrounds.name%>
+            </h1>
+        </div>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/campgrounds/<%= allCampgrounds._id%>/comments" method="POST">
+
+                <div class="form-group">
+                    <textarea name="comment[text]" cols="46" rows="10" placeholder="description"></textarea>
+                </div>
+                <button class="btn btn-primary btn-block">Submit</button>
+
+                <a href="/campgrounds/<%= allCampgrounds._id%>">Back</a>
+        </div>
+    </div>
+</div>
+<% include ../views/foot %>
