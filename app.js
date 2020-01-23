@@ -12,7 +12,7 @@ var express = require("express"),
 //     seedDB = require("./seed");
 // seedDB();
 
-mongoose.connect("mongodb://localhost:27017/test", {
+mongoose.connect("mongodb+srv://Satya-19:satya@campgrounds-oy7kn.mongodb.net/test", {
     useNewUrlParser: true
 });
 
@@ -256,4 +256,4 @@ function isCommentAuthor(req, res, next) {
     }
 }
 
-app.listen(port, () => console.log(`Server listening at ${port}`));
+app.listen(process.env.PORT);
