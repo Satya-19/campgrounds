@@ -13,7 +13,8 @@ var express = require("express"),
 // seedDB();
 
 mongoose.connect(process.env.DATABASEURL, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 app.use(require("express-session")({
