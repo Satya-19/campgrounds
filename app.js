@@ -12,7 +12,7 @@ var express = require("express"),
 //     seedDB = require("./seed");
 // seedDB();
 
-mongoose.connect("mongodb+srv://Satya-19:satya@campgrounds-oy7kn.mongodb.net/test", {
+mongoose.connect(process.env.DATABASEURL, {
     useNewUrlParser: true
 });
 
